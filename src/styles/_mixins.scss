@@ -1,0 +1,66 @@
+@mixin generate-margin-classes-for($i){
+  @while($i < 101) {
+    .m-#{$i}{
+      margin: #{$i}px ;
+    }
+
+    .m-t-#{$i}{
+      margin-top: #{$i}px ;
+    }
+
+    .m-b-#{$i}{
+      margin-bottom: #{$i}px ;
+    }
+
+    .m-t-b-#{$i}{
+      margin-top: #{$i}px ;
+      margin-bottom: #{$i}px ;
+    }
+
+    .m-l-#{$i}{
+      margin-left: #{$i}px ;
+    }
+
+    .m-r-#{$i}{
+      margin-right: #{$i}px ;
+    }
+
+    .m-l-r-#{$i}{
+      margin-left: #{$i}px ;
+      margin-right: #{$i}px ;
+    }
+    $i : $i + 5;
+  }
+}
+
+@mixin generate-padding-classes-for($i){
+  .p-#{$i}{
+    padding: #{$i}px ;
+  }
+
+  .p-t-#{$i}{
+    padding-top: #{$i}px ;
+  }
+
+  .p-b-#{$i}{
+    padding-bottom: #{$i}px ;
+  }
+
+  .p-t-b-#{$i}{
+    padding-top: #{$i}px ;
+    padding-bottom: #{$i}px ;
+  }
+
+  .p-l-#{$i}{
+    padding-left: #{$i}px ;
+  }
+
+  .p-r-#{$i}{
+    padding-right: #{$i}px ;
+  }
+
+  .p-l-r-#{$i}{
+    padding-left: #{$i}px ;
+    padding-right: #{$i}px ;
+  }
+}
