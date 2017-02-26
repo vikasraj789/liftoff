@@ -15,27 +15,123 @@ $paddingIndex:0;
 }
 
 
-.App {
-  text-align: center;
+.wrapper {
+  min-height: 100vh;
+
+  .complete-wrapper {
+    @include displayFlex();
+    min-height: inherit;
+
+    .background-wrapper {
+      width: 50%;
+      background: url(".././../public/background.jpg") no-repeat 50%;
+      background-size: cover;
+      -webkit-filter: grayscale(50%);
+      filter: grayscale(50%);
+    }
+
+    .form-container {
+      width: 50%;
+      @include displayFlex();
+      flex-direction: column;
+      justify-content: flex-end;
+      -webkit-flex-direction: column;
+      -webkit-justify-content: flex-end;
+      margin-bottom: 150px;
+      margin-left: 40px;
+
+      .name-start-holder,.value-end-holder {
+        position: relative;
+      }
+
+      .flex-container {
+        @include displayFlex();
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        @media screen and (max-width: 992px){
+          display: block;
+          max-width: 255px;
+        }
+
+        .value-holder {
+          margin-top: 30px;
+
+          span.title {
+            opacity: 0.4;
+          }
+
+          .slider-value {
+          }
+        }
+
+        .value-wrapper {
+          margin-left: 10px;
+          margin-right: 15px;
+
+          >div {
+            >div {
+              margin-top: 5px !important;
+              margin-bottom: 1px !important;
+            }
+          }
+        }
+      }
+
+      .goto-reports {
+        text-align: right;
+        margin-top: 25px;
+        margin-right: 15px;
+      }
+    }
+
+    .err-txt {
+      position: absolute;
+      text-align: right;
+      left: 0;
+      color: #c54b1e;
+      font-size: 13px;
+    }
+  }
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.modal-container {
+  position: relative;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.modal-dialog {
+  .modal-header,.modal-footer {
+    border: none;
+  }
+
+  .text-holder {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    @include flexAlignAndJustifyCenter();
+    margin-top: 9px;
+    font-size: 16px;
+  }
+
+  .modal-heading {
+    .modal-title {
+      font-size: 21px;
+    }
+  }
 }
 
-.App-intro {
-  font-size: large;
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }

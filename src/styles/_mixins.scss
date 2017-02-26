@@ -64,3 +64,29 @@
     padding-right: #{$i}px ;
   }
 }
+
+@mixin displayFlex() {
+  display: -webkit-box;
+  display: flex;
+  display: -webkit-flex;
+}
+
+@mixin flexAlignAndJustifyCenter() {
+  @include displayFlex();
+  align-items: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+}
+
+@mixin flexAlign() {
+  @include displayFlex();
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+@mixin flexJustify() {
+  @include displayFlex();
+  justify-content: center;
+  -webkit-justify-content: center;
+}
