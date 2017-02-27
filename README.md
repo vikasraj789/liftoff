@@ -1,3 +1,7 @@
+![home](https://cloud.githubusercontent.com/assets/17960700/23348105/40dea40c-fccd-11e6-92db-1ccf126bd2f5.png)
+![report](https://cloud.githubusercontent.com/assets/17960700/23348104/40db7656-fccd-11e6-8100-1fe507c2d4d5.png)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
